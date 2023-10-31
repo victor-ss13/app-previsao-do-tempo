@@ -12,18 +12,23 @@
 </head>
 
 <body>
-    <div>
-        <input placeholder="Digite o nome da cidade">
-        <button>Buscar</button>
+    <div class="box">
+        <input placeholder="Digite o nome da cidade" class="box__input">
+        <button class="box__search">
+            <img src="https://www.svgrepo.com/show/488200/find.svg" alt="Busca" class="box__search__img">
+        </button>
 
-        <h2>Tempo em São Paulo</h2>
+        <div class="medium-box">
+            <h2 class="medium-box__city">Tempo em São Paulo</h2>
 
-        <p>21°C</p>
+            <p class="medium-box__temp">21°C</p>
+        </div>
 
-        <img src="https://openweathermap.org/img/wn/04n.png" alt="Ícone info do tempo">
-        <p>Nublado</p>
-
-        <p>Umidade: 76%</p>
+        <div class="small-box">
+            <img src="https://openweathermap.org/img/wn/04n.png" alt="Ícone info do tempo" class="small-box__img">
+            <p class="small-box__weather">Nublado</p>
+        </div>
+        <p class="umidity">Umidade: 76%</p>
     </div>
 </body>
 

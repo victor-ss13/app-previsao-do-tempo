@@ -6,3 +6,89 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+:root {
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza: #7c7c7c2b
+}
+
+body {
+    height: 100vh; /*Definimos que o body vai ocupar 100% da altura tela disponível (viewport height)*/
+    width: 100vw; /*Definimos que o body vai ocupar 100% da largura tela disponível (viewport width)*/
+    display: flex;
+    justify-content: center; /*Alinha os itens no eixo horizontal*/
+    align-items: center; /*Alinha os itens no eixo vertical*/
+    background-image: url("https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTY5ODQxMTgzMw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600");
+}
+
+.box {
+    background: var(--preto);
+    opacity: 0.8; /*Definimos que a cor do background será opaca*/
+    border-radius: 25px; /*Definimos o raio do arredondamento da borda*/
+    padding: 20px;
+    width: 95%; /*Ao utilizar apenas essa propriedade, essa box ocupa grande parte da tela*/
+    max-width: 450px; /*Essa propriedade controla a anterior. Em telas grandes, a width vai chegar até no máximo 450px enquanto em telas menores, ocupará 95%*/
+}
+
+.box__input {
+    border: none; /*Removemos as bordas do elemento*/
+    outline: none; /*Removemos a linha exterior do input*/
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: var(--cinza);
+    color: var(--branco);
+    width: 60%; /*O professor define como calc(100%vw-100px), mas preferi utilizar outro valor*/
+}
+
+.box__input::placeholder {
+    font-size: 14px;
+}
+
+.box__search {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--cinza);
+    cursor: pointer; /*Utilizamos para fazer com que o cursos fique com a "mãozinha" ao passar pelo elemento*/
+    float: right; /*Utilizamos para fazer com que esse elemento "flutue" a direita da página*/
+}
+
+.box__search__img {
+    width: 20px;
+}
+
+.medium-box {
+    margin-top: 30px; /*Pode ser substituído pelo trecho comentado na classe ".medium-box__city"*/
+}
+
+.medium-box__city {
+    color: var(--branco);
+    font-size: 28px;
+    font-weight: 300;
+    /* margin: 30px 0 20px 0;*/
+}
+
+.medium-box__temp {
+    font-size: 20px;
+    color: var(--branco);
+    margin-top: 20px; /*Pode ser substituído pelo trecho comentado na classe ".medium-box__city"*/
+}
+
+.small-box {
+    display: flex; /*Utilizamos para posicionar os elementos dentro dessa div um ao lado do outro*/
+    align-items: center;
+    margin-top: 20px; /*Utilizamos para dar o espaçamento entre a div acima*/
+}
+
+.small-box__weather {
+    color: var(--branco);
+    margin-left: 20px;
+}
+
+.umidity {
+    color: var(--branco);
+    margin-top: 20px;
+}
