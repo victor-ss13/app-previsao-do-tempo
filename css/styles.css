@@ -86,9 +86,10 @@ body {
 .small-box__weather {
     color: var(--branco);
     margin-left: 20px;
+    text-transform: capitalize;
 }
 
-.umidity {
+.humidity {
     color: var(--branco);
     margin-top: 20px;
 }
